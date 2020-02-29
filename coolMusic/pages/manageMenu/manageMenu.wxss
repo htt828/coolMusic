@@ -1,0 +1,28 @@
+@import '../../iconfont.wxss';
+page{
+  padding: 20rpx;
+  background: whitesmoke;
+}
+.van-checkbox{
+  align-items: center;
+}
+.footer{
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  padding: 20rpx;
+  background: white;
+  width: 100vw;
+ text-align: center;
+ color: #999;
+}
+.icon-shanchu{
+  font-size: 50rpx;
+  margin-bottom: 10rpx;
+}
+.delete{
+  font-size: 26rpx;
+}
+.van-checkbox__icon{
+  border: 1px solid #666 !important;
+}

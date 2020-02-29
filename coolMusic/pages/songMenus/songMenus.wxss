@@ -1,0 +1,49 @@
+@import '../../iconfont.wxss';
+page{
+  padding-left: 30rpx;
+}
+.addMenu{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.icon-jia,.icon-xihuan1{
+  padding: 38rpx;
+  border-radius: 20rpx;
+  margin-right: 40rpx;
+  color: white;
+  font-size: 70rpx;
+}
+.icon-jia{
+  font-size: 60rpx;
+  background: rgb(132, 199, 160);
+}
+.icon-xihuan1{
+  font-size: 60rpx;
+  background: rgb(221, 146, 158);
+}
+.sheetNum{
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+.sheetName{
+  color: #333;
+  font-size: 28rpx;
+}
+.menuInput{
+  
+}
+.van-field__input { 
+  width: 65vw !important;
+  padding: 15rpx !important;
+  text-align: center;
+  background: #eee !important;
+  line-height: 50rpx !important;
+  height: 69rpx !important;
+  margin: 20rpx auto !important;
+}
+van-cell{
+  text-align: center;
+  margin: 0 
+}

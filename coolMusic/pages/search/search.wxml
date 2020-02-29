@@ -1,0 +1,39 @@
+<view class='searchTop'>
+  <van-search bind:clear='clear' value="{{ value }}" placeholder="请输入搜索关键词" use-action-slot bind:change="onChange" bind:search="onSearch">
+    <view slot="action" bind:tap="searchSong">搜索</view>
+  </van-search>
+</view>
+
+<view wx:if='{{!showRes}}'>
+  <!-- 搜索历史 -->
+  <view class="searchHistory">
+    <view class="searchTitle">
+      <view class="titleLeft">搜索历史</view>
+      <view class="iconfont icon-shanchu" bindtap="deleteHistory"></view>
+    </view>
+    <view class="historys">
+      <view class="historyItem" data-historyWord="{{item}}" bindtap="clickHistory" wx:for='{{historyItem}}' wx:key='{{index}}'>{{item}}</view>
+    </view>
+  </view>
+
+  <!-- 热门搜索 -->
+  <view class="hotSearch">
+    <view class="searchTitle titleLeft">热门搜索</view>
+    <view class="hotSearchItem" data-item="{{item}}" bindtap="playAudio" wx:for='{{hotSearchs}}' wx:key='{{index}}'>
+      <view class="sortNum {{index<3?'topThreeSortNum':''}}">{{index+1}} </view>
+      <view class="itemInfo">
+        <view class="nameOut">
+          <view class="name">{{item.name}}</view>
+          <view class="hot" wx:if='{{index===0}}'>hot</view>
+        </view>
+        <view class="hotText">{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="searchRes" bindtap="playAudio" wx:if='{{showRes}}'>
+  <van-icon name='search' color="#999" />
+  <view class="name" >{{searchSong.name}}</view>
+  <view class="singer">{{searchSong.singer}}</view>
+</view>

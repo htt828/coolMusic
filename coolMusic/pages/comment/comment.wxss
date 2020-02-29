@@ -1,0 +1,115 @@
+@import '../../iconfont.wxss';
+.songInfo{
+  display: flex;
+  padding: 25rpx 35rpx;
+  background: whitesmoke;
+}
+.infoLft{
+  position: relative;
+}
+.infoRight{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.infoLft image{
+  width: 160rpx;
+  height: 160rpx !important;
+  border-radius: 20rpx;
+  margin-right: 25rpx;
+}
+
+
+.iconfont{
+  z-index: 99;
+  bottom: 57rpx;
+  right: 72rpx;
+  position: absolute;
+  color: white !important;
+ font-weight: 700;
+  font-size: 46rpx;
+}
+.infoRight .name{
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+.singer{
+  font-size: 23rpx;
+  color: #888;
+}
+.comment{
+  padding-left: 25rpx;
+}
+.title{
+  margin-top: 30rpx;
+  padding-top: 20rpx;
+  border-top: 1px solid #eee;
+  padding-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.titleRight{
+  margin-left: 20rpx;
+  color: #888;
+  font-size: 28rpx;
+}
+.commentContainer{
+  height: 67vh;
+  overflow: scroll;
+}
+.commentitem{
+  display: flex;
+  margin-bottom: 50rpx;
+}
+.header{
+  width: 80rpx;
+  height: 80rpx !important;
+  border-radius: 80rpx;
+  margin-right: 25rpx;
+}
+.rightTop{
+  display: flex;
+  flex-direction: column;
+}
+.commentRight .name,.time{
+  color:#777; 
+
+}
+.commentRight .name{
+  font-size: 28rpx;
+}
+.time{
+  font-size: 22rpx;
+   margin-top: 8rpx;
+  margin-bottom: 20rpx;
+}
+.commentText{
+  font-size: 28rpx;
+}
+.resInput{
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  padding: 20rpx 30rpx;
+  background:whitesmoke;
+}
+.commentInput{
+  border-radius: 60rpx;
+  width: 70vw;
+  background: white;
+  height: 70rpx;
+  padding-left: 20rpx;
+}
+button{
+  width: 120rpx !important;
+  height: 66rpx;
+  font-size: 27rpx !important;
+
+
+}
+button[size='mini'] {
+  line-height: 2.6;
+}

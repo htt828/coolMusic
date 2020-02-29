@@ -1,0 +1,76 @@
+/* pages/menuInfo/menuInfo.wxss */
+@import '../../iconfont.wxss';
+.top{
+  display: flex;
+  padding: 50rpx;
+  
+  background: #99816993;
+}
+.preImg{
+  width: 230rpx !important;
+  height: 230rpx !important;
+  border-radius: 20rpx;
+  margin-right: 50rpx;
+}
+.menuName{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: white;
+}
+.nickName{
+  font-size: 28rpx;
+  color: white;
+  margin-top: 30rpx;
+}
+.top-right{
+  margin-right: 90rpx;
+}
+/* 歌单 */
+.songList{
+  padding: 30rpx;
+}
+.icon-guanli{
+  font-size: 50rpx;
+}
+.title{
+  margin-bottom: 25rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.songItem{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  
+}
+.songleft{
+  flex: 10;
+  display: flex;
+  align-items: center;
+}
+.index{
+  text-align: center;
+  flex: 2;
+}
+.songInfo{
+  flex: 7;
+}
+.icon-ziyuan,.icon-gengduo{
+  text-align: center;
+  color: #999;
+  flex: 1;
+}
+.singer{
+  color: #999;
+  margin-top: 10rpx;
+  font-size: 27rpx;
+}
+.activeItem{
+  color: rgba(24, 197, 82, 0.925) !important;
+}
+.van-icon,.van-icon:before {
+  font-size: 40rpx;
+  margin-top: 13rpx;
+}
+

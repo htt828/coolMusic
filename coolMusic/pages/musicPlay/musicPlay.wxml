@@ -1,0 +1,53 @@
+<!-- 音乐播放界面 -->
+<view class="musicPlay">
+  <image class='backgroundImg' mode="widthFix" src="{{curSongInfo.preImg}}"></image>
+  <view class="main">
+    <swiper indicator-dots='true' current='true'>
+      <swiper-item>
+        <view class='songInfo'>{{curSongInfo.name}}-{{curSongInfo.singer}}</view>
+        <view class="songMore">
+          <view class="comment">
+            <view class="iconfont icon-pinglun" bindtap="gotoComment"></view>
+            <sup class="commentCount">{{curSongInfo.comments.length}}</sup>
+          </view>
+          <view class="iconfont icon-shipin" bindtap="goToVideo"></view>
+          <view bindtap="like" class="iconfont {{isLike?'icon-xihuan':'icon-xihuan1'}}"></view>
+
+        </view>
+        <view class="preImg">
+          <image src="{{curSongInfo.preImg}}" mode="widthFix"></image>
+        </view>
+        <!-- 歌词 -->
+        <view class="lyric">{{curLyric}}</view>
+      </swiper-item>
+      <swiper-item>
+        <view class="lyrics">
+          <view class="lyricItem {{activeLyricIndex===index?'activeLyric':''}}" wx:for='{{lyricParseArr}}' wx:key='{{index}}'>{{item.lyric}}</view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <slider activeColor='#629df0' bindchange='onSliderChange' value="{{sliderProcess}}" backgroundColor="#777" block-size='16' block-color='#77acf7' style="width:600rpx;margin-left:125rpx;"></slider>
+    <view class="musicPlayControl">
+      <view class="iconfont icon-xunhuan"></view>
+      <view class="iconfont icon-shangyishou" bindtap="shiftSong" data-type="pre"></view>
+
+      <view class="iconfont {{audioState?'icon-zanting':'icon-bofang'}}" bindtap="shiftPlayAndPause"></view>
+      <view data-type="next" bindtap="shiftSong" class="iconfont icon-xiayishou"></view>
+      <view bindtap="showList" class="iconfont icon-yinleliebiao-"></view>
+      <view bindtap="addToList" class="iconfont icon-xinjian"></view>
+    </view>
+  </view>
+</view>
+
+<van-popup show="{{ show }}" closeable position="bottom" custom-style="height: 40%" bind:close="onClose">
+  <view bindtap="choiceSong" data-item='{{item}}' class="songItem" wx:for='{{songList}}' wx:key='{{index}}'>
+    <view class="left">
+      <view class="name">{{item.name}}</view>
+      <view class="singer">-{{item.singer}}</view>
+    </view>
+    <view class="iconfont icon-yinle-yuanshijituantubiao"></view>
+  </view>
+  <view class="close" bindtap="onClose">
+    关闭
+  </view>
+</van-popup>

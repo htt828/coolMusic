@@ -1,0 +1,6 @@
+<view class='recent'>
+  <view class="title">最近常听</view>
+  <view class="audioPlay">
+    <audioItem bindtap="audioPlay" data-index='{{index}}' wx:for='{{hotList}}' wx:key='{{index}}' item='{{item}}'/>
+  </view>
+</view>

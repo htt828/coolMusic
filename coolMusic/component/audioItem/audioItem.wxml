@@ -1,0 +1,13 @@
+<view class='audioItemOut'>
+  <view class="audioImg">
+    <image mode="widthFix" class="songImg" src="{{item.preImg?item.preImg:'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=676616273,3863491235&fm=26&gp=0.jpg'}}"></image>
+    <view class="imgInfo">
+      <view class="listenCount">
+        <view class="iconfont icon-shiting"></view>
+        <text class="countNum">10万</text>
+      </view>
+      <view class="iconfont icon-bofang"></view>
+    </view>
+  </view>
+  <view class="desc">{{item.name}}-{{item.singer}}</view>
+</view>

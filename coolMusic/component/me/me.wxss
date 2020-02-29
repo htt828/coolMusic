@@ -1,0 +1,81 @@
+@import '../../iconfont.wxss';
+.userAndSongInfo{
+  background:rgb(245, 242, 242);
+  border-radius: 20rpx;
+  margin: 40rpx;
+}
+.userInfo{
+  padding: 40rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20rpx;
+}
+.userInfo image{
+  border-radius: 70rpx;
+  width: 70rpx !important;
+  height: 70rpx !important;
+  margin-right: 20rpx;
+}
+.userInfo .userName{
+  
+}
+.songInfo{
+  padding: 30rpx 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.icon-xihuan,.icon-zuijinlaifang{
+  color: rgb(209, 127, 141);
+  font-size: 50rpx;
+}
+.icon-zuijinlaifang{
+  font-size: 56rpx;
+}
+.songSheet{
+  padding-left: 10rpx;
+}
+.songInfoItem{
+  margin-top: 25rpx;
+  margin-bottom: 18rpx;
+  font-size: 28rpx;
+}
+.num{
+  font-size: 24rpx;
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  align-items: center;
+}
+.titleLeft{
+  font-size: 31rpx;
+  font-weight: 600;
+  padding-bottom: 26rpx;
+}
+.titleRight{
+  display: flex;
+  justify-content: center;
+}
+.icon-xinjian,.icon-guanli{
+  font-size: 50rpx;
+  color: #000 !important;
+}
+.icon-xinjian{
+  margin-right: 30rpx;
+  font-size: 45rpx;
+}
+.van-field__input { 
+  width: 65vw;
+  padding: 15rpx;
+  text-align: center;
+  background: #eee !important;
+  line-height: 50rpx;
+  height: 69rpx;
+  margin: 20rpx auto;
+}
+
+
+

@@ -1,0 +1,37 @@
+<!-- 评论界面 -->
+<view class="songInfo">
+  <view class="infoLft">
+    <image mode="widthFix" src="{{curSongInfo.preImg?curSongInfo.preImg:'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=676616273,3863491235&fm=26&gp=0.jpg'}}"></image>
+    <view bindtap="shiftPlayAndPause" class="iconfont {{audioState?'icon-zanting':'icon-ziyuan'}}"></view>
+  </view>
+  <view class="infoRight">
+    <view class="name">{{curSongInfo.name}}</view>
+    <view class="singer">{{curSongInfo.singer}}</view>
+  </view>
+</view>
+<view class="comment">
+  <view class="title">
+    <view class="titleLeft">全部评论</view>
+    <view class="titleRight">{{curSongInfo.comments.length}}</view>
+  </view>
+  <view class="commentContainer">
+
+    <view class="commentitem" wx:for='{{curSongInfo.comments}}' wx:key='{{index}}'>
+      <view class="commentLeft">
+        <image class="header" mode="widthFix" src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1225597740,615370700&fm=111&gp=0.jpg"></image>
+      </view>
+      <view class="commentRight">
+        <view class="rightTop">
+          <view class="name">{{item.nickName}}</view>
+          <view class="time">{{item.created}}</view>
+        </view>
+        <view class="commentText">{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="resInput">
+  <input type="text" bindinput="onInput" class="commentInput" placeholder="发表评论"></input>
+  <button type="primary" size="mini" bindtap="submitComment" class="submit">发送</button>
+</view>

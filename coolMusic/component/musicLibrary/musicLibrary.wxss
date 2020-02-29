@@ -1,0 +1,102 @@
+@import '../../iconfont.wxss';
+
+.sliderImg{
+  min-width: 100vw !important;
+  height: 270rpx;
+}
+swiper-item,swiper{
+  width: 100vw;
+}
+.hot{
+  padding: 10rpx;
+}
+.hotsongs{
+  display: flex;
+  justify-content: space-around;
+}
+.title{
+  font-size: 31rpx;
+  font-weight: 700;
+}
+.hotItem{
+  width: 28vw;
+}
+.menuInfoItem{
+  position: relative;
+}
+.songImg{
+  width: 28vw;
+  height: 200rpx !important;
+  border-radius: 20rpx;
+}
+.imgInfo{
+  color: white !important;
+  position: relative;
+  bottom: 70rpx;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  justify-content: space-around;
+  width: 100%;
+}
+.listenCount{
+  align-items: center;
+  display: flex;
+  
+}
+.countNum{
+  font-size: 24rpx;
+}
+.icon-bofang{
+  font-size: 37rpx !important;
+}
+.desc{
+  padding-left: 3rpx;
+  font-size: 27rpx;
+  display: -webkit-box;
+ -webkit-line-clamp: 1;
+ /* 文字溢出部分用省略号表示 */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+}
+
+/* 分类 */
+.menuItem{
+  padding: 30rpx;
+  background:whitesmoke;
+  color: #999;
+}
+.activeMenu{
+  border-left: 6rpx rgb(209, 127, 141) solid;
+  background: white;
+  color: #666;
+}
+.sortContainer{
+  display: flex;
+}
+.menu{
+  margin-right: 20rpx;  
+}
+.audioImg{
+  height: 218rpx;
+}
+.sortItem{
+  display: flex;
+}
+.MenuRight{
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.songName{
+  font-size: 29rpx;
+}
+.songText{
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 20rpx;
+}

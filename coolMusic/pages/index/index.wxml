@@ -1,0 +1,26 @@
+<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+<view wx:else>
+  <!-- 顶部内容 -->
+<view class="top">
+  <image class="logo" mode="widthFix" src="http://m.qpic.cn/psc?/V11MflXf4GXMa4/S5z.*ov051w3o7gBaJERRtEEXIXfOjVe4dNKdP7NPCuvDC2j3BqR8bVVHkmr6KwUIkZwDLWWeGzREyiYL9tulR1nI.sSEPVezO6D8k4q.oo!/b&bo=zQAmAAAAAAADB8k!&rf=viewer_4&t=5"></image>
+  
+  <view class="search iconfont icon-sousuo" bindtap="search"></view>
+  <image class="userHead" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+</view>
+
+<!-- tabbar -->
+<van-tabs border='{{false}}' swipeable='true' animated='true' active="{{ active }}" bind:change="onChange" tab-active-class='tabActive'>
+  <van-tab title="音乐库">
+    <music-library></music-library>
+  </van-tab>
+  <van-tab title='推荐'>
+    <recommend/>
+  </van-tab>
+  <van-tab title="我的">
+    <me max='1' userInfo='{{userInfo}}' hasCurSong='{{hasCurSong}}'></me>
+  </van-tab>
+</van-tabs>
+</view>
+<!-- 播放控件 -->
+<!-- <audio bindtap="gotoMusicPlay" bindplay='playMusic' bindpause='pauseMusic' class="audio" poster="{{curSongItem.preImg}}" name="{{curSongItem.name}}" author="{{curSongItem.singer}}" src="{{curSongItem.src}}" id="myAudio" controls loop action='false'></audio> -->
+

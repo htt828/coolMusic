@@ -1,0 +1,4 @@
+{
+  "usingComponents": {"menuItem": "../../component/menuItem/menuItem"},
+  "navigationBarTitleText":"歌单管理"
+}

@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/musicPlay/musicPlay",
+    "pages/video/video",
+    "pages/comment/comment",
+    "component/me/me",
+    "pages/search/search",
+    "component/audioItem/audioItem",
+    "pages/songMenus/songMenus",
+    "pages/manageMenu/manageMenu",
+    "pages/menuInfo/menuInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "酷乐",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-tab": "vant-weapp/tab/index",
+    "van-tabs": "vant-weapp/tabs/index",
+    "van-icon": "vant-weapp/icon/index",
+    "van-cell": "vant-weapp/cell/index",
+    "van-cell-group": "vant-weapp/cell-group/index",
+    "van-search": "vant-weapp/search/index",
+    "van-dialog": "vant-weapp/dialog/index",
+    "van-field": "vant-weapp/field/index",
+    "van-checkbox": "vant-weapp/checkbox/index",
+    "van-checkbox-group": "vant-weapp/checkbox-group/index",
+    "van-popup": "vant-weapp/popup/index",
+    "music-library": "./component/musicLibrary/musicLibrary"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,8 @@
+<view class="cellTitle">
+  <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2180385776,4264454993&fm=26&gp=0.jpg" mode="aspectFill"></image>
+  <view class="sheetRight">
+  
+    <view class="sheetName">{{item.name}}</view>
+    <view class="sheetNum">{{item.songs.length}}首</view>
+  </view>
+</view>

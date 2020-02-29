@@ -1,0 +1,18 @@
+<!--歌单管理-->
+<van-radio-group bind:change='onChange' value="{{ radio }}" bind:change="onChange">
+  <van-radio checked-color="rgb(209, 127, 141)" wx:for='{{menuList}}' wx:key='{{index}}' name="{{item._id}}">
+    
+  </van-radio>
+</van-radio-group>
+
+<van-checkbox-group value="{{ result }}" bind:change="onChange">
+  <van-checkbox checked-color="rgb(209, 127, 141)" wx:for='{{menuList}}' wx:key='{{index}}' name="{{item._id}}">
+    <menuItem item='{{item}}'/>
+  </van-checkbox>
+</van-checkbox-group>
+
+
+<view class="footer">
+  <view bindtap="deleteMenu" class="iconfont icon-shanchu"></view>
+  <view bindtap="deleteMenu" class="delete">删除</view>
+</view>

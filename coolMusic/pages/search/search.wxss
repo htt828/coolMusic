@@ -1,0 +1,67 @@
+@import '../../iconfont.wxss';
+.searchTitle{
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titleLeft{
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.icon-shanchu{
+  font-size: 40rpx;
+  color: #999;
+}
+.historys{
+  padding: 0 30rpx;
+}
+.historyItem{
+  font-size: 27rpx;
+  background: whitesmoke;
+  display: inline-block;
+  margin-bottom: 17rpx;
+  margin-right: 40rpx;
+  padding: 16rpx;
+  border-radius: 25rpx;
+}
+.hotSearchItem{
+  padding-left: 30rpx;
+  display: flex;
+  margin-bottom: 35rpx;
+  align-items: center;
+}
+.nameOut{
+  display: flex;
+}
+.sortNum{
+  margin-right: 30rpx;
+  color: #999;
+}
+.hotText{
+  margin-top: 12rpx;
+  color: #999;
+  font-size: 26rpx;
+}
+.topThreeSortNum{
+  color: red;
+}
+.hot{
+  margin-left: 20rpx;
+  color: white;
+  background:rgb(214, 46, 46);
+  padding: 2rpx;
+  font-size: 25rpx;
+  border-radius: 10rpx;
+}
+.searchRes{
+  align-items: center;
+  display: flex;
+  padding: 38rpx;
+}
+.searchRes .name{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  color: rgb(68, 173, 68);
+}
+

@@ -1,0 +1,2 @@
+<!-- 视频界面 -->
+<web-view src="{{videoUrl}}"></web-view>

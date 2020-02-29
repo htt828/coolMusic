@@ -1,0 +1,38 @@
+@import '../../iconfont.wxss';
+.top{
+  display: flex;
+  padding: 20rpx;
+  align-items: center;
+}
+.logo{
+  width: 30vw;
+}
+.tabActive{
+  font-size: 32rpx !important;
+  font-weight: 700;
+}
+.search{
+  position: absolute;
+  right: 30vw;
+  font-size: 43rpx !important;
+  color: #777;
+}
+
+.userHead{
+  border-radius: 70rpx;
+  width: 70rpx !important;
+  height: 70rpx !important;
+  position: absolute;
+  right: 10vw;
+ 
+}
+audio{
+  position: absolute;
+  bottom: 0;
+  width: 100vw !important;
+  background: white;
+  border: none;
+  outline: none;
+   display: flex;
+  flex-direction: column;
+}

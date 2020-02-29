@@ -1,0 +1,35 @@
+<!--歌单详情-->
+<view class="top">
+  <image src="{{menuSongs[0].preImg?menuSongs[0].preImg:'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=676616273,3863491235&fm=26&gp=0.jpg'}}" mode="widthFix" class='preImg'></image>
+  <view class="top-right">
+    <view class="menuName">{{isLike=='true'?'喜欢':menuInfo.name}}</view>
+    <view class="nickName">{{userInfo.nickName}}</view>
+  </view>
+  <van-icon name='edit' wx:if='{{isLike == "false"}}' color="white" bindtap="showModal" />
+</view>
+
+<!-- 歌单列表 -->
+<view class="songList">
+  <view class="title">全部({{menuSongs.length}})</view>
+
+  <view class="songs">
+    <view class="songItem {{index === curSongIndex?'activeItem':''}}" wx:for='{{menuSongs}}' wx:key='{{index}}'>
+      <view class="songleft" bindtap='audioPlay' data-index='{{index}}' data-item='{{item}}'>
+        <view class="index">{{index+1}}</view>
+        <view class="songInfo">
+          <view class="songName {{index === curSongIndex?'activeItem':''}}">{{item.name}}</view>
+          <view class="singer {{index === curSongIndex?'activeItem':''}}">{{item.singer}}</view>
+        </view>
+        <view class="iconfont icon-ziyuan {{index === curSongIndex?'activeItem':''}}"></view>
+      </view>
+      <view class="iconfont icon-gengduo" bindtap="showPop" data-index='{{index}}' data-id="{{item._id}}"></view>
+    </view>
+  </view>
+</view>
+
+<!-- 修改歌单输入框 -->
+<van-dialog bind:confirm='editMenu' use-slot title="修改歌单" show="{{ show }}" show-cancel-button>
+  <van-field bind:change="onChange" center value='{{menuName}}' placeholder="请输入歌单名称" border='{{false}}' clearable>
+  </van-field>
+
+</van-dialog>

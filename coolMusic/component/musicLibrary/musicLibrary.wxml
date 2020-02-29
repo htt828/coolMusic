@@ -1,0 +1,41 @@
+<!-- 轮播图 -->
+<swiper indicator-dots='true' circular='true' autoplay='true' current='true'>
+  <swiper-item bindtap='gotoVideo' data-video='{{item.videoUrl}}' wx:for='{{sliders}}' wx:key='{{index}}'>
+    <image class="sliderImg" mode="aspectFill" src="{{item.prePlayImgUrl}}"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 热歌推荐 -->
+<view class="hot">
+  <van-cell title-class='title' title="近期热歌" is-link value="查看更多" />
+  <view class="hotsongs">
+    <audioItem bindtap="audioPlay" data-sort='1' data-item='{{item}}' wx:for='{{hotList}}' wx:key='{{index}}' item='{{item}}' />
+  </view>
+</view>
+
+<view class="sort">
+  <van-cell border='{{false}}' title-class='title' title="分类专区" is-link value="查看更多" />
+  <view class="sortContainer">
+    <view class="menu">
+      <view bindtap="selectSort" data-index="{{index}}" class="menuItem {{activeIndex===index?'activeMenu':''}}" wx:for='{{menuItems}}' wx:key='{{index}}'>{{item}}</view>
+    </view>
+    <view class="sortRihgt">
+      <view class="sortItem" data-sort="{{activeIndex+2}}" bindtap="audioPlay" data-item="{{item}}" wx:for='{{sortList}}' wx:key='{{index}}'>
+        <view class="audioImg">
+          <image mode="widthFix" class="songImg" src="{{item.preImg?item.preImg:'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=676616273,3863491235&fm=26&gp=0.jpg'}}"></image>
+          <view class="imgInfo">
+            <view class="listenCount">
+              <view class="iconfont icon-shiting"></view>
+              <text class="countNum">10万</text>
+            </view>
+            <view class="iconfont icon-bofang"></view>
+          </view>
+        </view>
+        <view class="MenuRight">
+          <view class="songName">{{item.name}}-{{item.singer}}</view>
+          <view class="songText">{{item.text}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

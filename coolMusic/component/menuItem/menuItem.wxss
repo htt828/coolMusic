@@ -1,0 +1,25 @@
+.cellTitle{
+  display: flex;
+  align-items: center;
+  margin-bottom: 28rpx;
+}
+.cellTitle image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 20rpx;
+  margin-right: 40rpx;
+}
+
+.sheetNum{
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+.sheetName{
+  color: #333;
+  font-size: 28rpx;
+}
+
+.sheetRight{
+  text-align: left;
+}

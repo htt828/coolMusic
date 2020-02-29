@@ -1,0 +1,11 @@
+.audioPlay{
+  display: flex;
+  justify-content: space-around;
+}
+.title{
+  margin-top: 20rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 30rpx;
+}

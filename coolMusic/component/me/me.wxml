@@ -1,0 +1,43 @@
+<view class='userAndSongInfo'>
+  <view class='userInfo'>
+    <image src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+    <view class="userName">{{userInfo.nickName}}</view>
+  </view>
+  <view class="songInfo">
+    <view class="like" bindtap="goToLikeList">
+      <view class="iconfont icon-xihuan"></view>
+      <view class="songInfoItem">喜欢</view>
+      <view class="num">{{userInfoDB.likeSongs.length}}</view>
+    </view>
+    <view class="recent">
+      <view class="iconfont icon-zuijinlaifang"></view>
+      <view class="songInfoItem">最近</view>
+      <view class="num">100</view>
+    </view>
+
+  </view>
+</view>
+<!-- 歌单 -->
+<view class="songSheet">
+  <view class="title">
+    <view class="titleLeft">我的歌单</view>
+    <view class="titleRight">
+      <view bindtap="shoeModal" class="iconfont icon-xinjian"></view>
+      <view bindtap="toManageMenu" class="iconfont icon-guanli"></view>
+    </view>
+  </view>
+  <view class="songSheets">
+    <view class="songSheetItem">
+      <van-cell is-link center  data-id='{{item._id}}' wx:for='{{menuList}}' wx:key='{{index}}'>
+        <menuItem data-id='{{item._id}}' bindtap='gotoMenuInfo' item='{{item}}'/>
+      </van-cell>
+    </view>
+  </view>
+</view>
+
+<!-- 新建歌单对话框 -->
+<van-dialog bind:confirm='addNewMenu' use-slot title="新建歌单" show="{{ show }}" show-cancel-button>
+  <van-field bind:change="onChange" center value='{{menuName}}' placeholder="请输入歌单名称" border='{{false}}' clearable>
+  </van-field>
+
+</van-dialog>

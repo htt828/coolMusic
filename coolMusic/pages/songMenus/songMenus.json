@@ -1,0 +1,4 @@
+{
+  "usingComponents": {"menuItem":"../../component/menuItem/menuItem"},
+  "navigationBarTitleText":"已选定1首添加到"
+}
